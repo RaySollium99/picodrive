@@ -1362,7 +1362,7 @@ static menu_entry e_menu_main[] =
 	mee_handler_id("Change CD",          MA_MAIN_CHANGE_CD,   main_menu_handler),
 	mee_cust_s_h  ("Storyware page",     MA_MAIN_PICO_PAGE, 0,mh_picopage, mgn_picopage, NULL),
 	mee_handler_id("Patches / GameGenie",MA_MAIN_PATCHES,     main_menu_handler),
-	mee_handler_id("Press START button to begin",      MA_MAIN_LOAD_ROM,    main_menu_handler),
+	mee_handler_id("Press CIRCLE button to begin",      MA_MAIN_LOAD_ROM,    main_menu_handler),
 	mee_cust_s_h  ("Save Game Options",  MA_OPT_SAVECFG_GAME, 0, mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
 	mee_cust_s_h  ("Load Game Options",  MA_OPT_LOADCFG, 0,   mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
 	mee_end,
