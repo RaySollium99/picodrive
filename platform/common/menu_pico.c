@@ -1352,23 +1352,19 @@ static const char h_saveload[] = "Game options are overloading global options";
 
 static menu_entry e_menu_main[] =
 {
-	mee_label     ("PicoDrive " VERSION),
+	mee_label     ("Sonic's UGC for PSP " VERSION),
 	mee_label     (""),
 	mee_label     (""),
-	mee_handler_id("Resume game",        MA_MAIN_RESUME_GAME, main_menu_handler),
-	mee_handler_id("Save state",         MA_MAIN_SAVE_STATE,  main_menu_handler),
-	mee_handler_id("Load state",         MA_MAIN_LOAD_STATE,  main_menu_handler),
-	mee_handler_id("Reset game",         MA_MAIN_RESET_GAME,  main_menu_handler),
+	mee_handler_id("Resume Game",        MA_MAIN_RESUME_GAME, main_menu_handler),
+	mee_handler_id("Save Game",         MA_MAIN_SAVE_STATE,  main_menu_handler),
+	mee_handler_id("Load Game",         MA_MAIN_LOAD_STATE,  main_menu_handler),
+	mee_handler_id("Reset Game",         MA_MAIN_RESET_GAME,  main_menu_handler),
 	mee_handler_id("Change CD",          MA_MAIN_CHANGE_CD,   main_menu_handler),
 	mee_cust_s_h  ("Storyware page",     MA_MAIN_PICO_PAGE, 0,mh_picopage, mgn_picopage, NULL),
 	mee_handler_id("Patches / GameGenie",MA_MAIN_PATCHES,     main_menu_handler),
-	mee_handler_id("Load new game",      MA_MAIN_LOAD_ROM,    main_menu_handler),
-	mee_handler   ("Change options",                          menu_loop_options),
-	mee_cust_s_h  ("Save global options",MA_OPT_SAVECFG, 0,   mh_saveloadcfg, mgn_saveloadcfg, NULL),
-	mee_cust_s_h  ("Save game options",  MA_OPT_SAVECFG_GAME, 0, mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
-	mee_cust_s_h  ("Load game options",  MA_OPT_LOADCFG, 0,   mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
-	mee_handler_id("Credits",            MA_MAIN_CREDITS,     main_menu_handler),
-	mee_handler_id("Exit",               MA_MAIN_EXIT,        main_menu_handler),
+	mee_handler_id("Press START button to begin",      MA_MAIN_LOAD_ROM,    main_menu_handler),
+	mee_cust_s_h  ("Save Game Options",  MA_OPT_SAVECFG_GAME, 0, mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
+	mee_cust_s_h  ("Load Game Options",  MA_OPT_LOADCFG, 0,   mh_saveloadcfg, mgn_saveloadcfg, h_saveload),
 	mee_end,
 };
 

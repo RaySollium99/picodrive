@@ -1,5 +1,7 @@
 *.o
 *.swp
+*.SFO
+*.PBP
 *.dll
 *.lib
 *.pdb
@@ -32,6 +34,7 @@ picodrive_libretro*
 PicoDrive*.opk
 PicoDrive*.ipk
 PicoDrive*.zip
+PicoDrive*.elf
 pico_int_offs.h
 amalgamate
 textfilter

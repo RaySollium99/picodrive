@@ -14,7 +14,6 @@ static const char h_8bit[] = "This option only works for 8bit renderers";
 	mee_onoff   ("Wait for vsync",     MA_OPT3_VSYNC,     currentConfig.EmuOpt, EOPT_VSYNC), \
 
 #define MENU_OPTIONS_ADV
-
 static menu_entry e_menu_sms_options[];
 static menu_entry e_menu_keyconfig[];
 
