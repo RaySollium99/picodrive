@@ -856,7 +856,7 @@ char *emu_get_save_fname(int load, int is_sram, int slot, int *time)
 	{
 		strcpy(ext, (PicoIn.AHW & PAHW_MCD) ? ".brm" : ".srm");
 		romfname_ext(saveFname, sizeof(static_buff),
-			(PicoIn.AHW & PAHW_MCD) ? "brm"PATH_SEP : "srm"PATH_SEP, ext);
+			(PicoIn.AHW & PAHW_MCD) ? "ms0:/PSP/SAVEDATA/SUGC/brm"PATH_SEP : "ms0:/PSP/SAVEDATA/SUGC/srm"PATH_SEP, ext);
 		if (!load)
 			return saveFname;
 
