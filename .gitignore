@@ -23,6 +23,7 @@ config.cfg
 srm/
 brm/
 mds/
+rom/
 cfg/
 libs/
 obj/

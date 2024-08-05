@@ -1,1 +1,1 @@
-#define VERSION "M1"
+#define VERSION "T6"
