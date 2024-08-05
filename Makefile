@@ -406,7 +406,7 @@ endif
 ifeq "$(PLATFORM)" "psp"
 PSPSDK ?= $(shell psp-config --pspsdk-path)
 TARGET = PicoDrive
-PSP_EBOOT_TITLE = "Sonic's UGC"
+PSP_EBOOT_TITLE = Sonic UGC
 PSP_EBOOT_ICON = platform/psp/data/icon.png
 LIBS += -lpng -lm -lz -lpspgu -lpsppower -lpspaudio -lpsprtc -lpspaudiocodec
 EXTRA_TARGETS = EBOOT.PBP
