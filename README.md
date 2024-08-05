@@ -1,108 +1,39 @@
-This is yet another SEGA 8 bit and 16 bit console emulator.
+# Sonic's UGC for PSP
 
-It can run games developed for most consumer hardware released
-by SEGA, up to and including the 32X:
-- **16 bit systems:** Mega Drive/Genesis, Sega/Mega CD, 32X, Pico
-- **8 bit systems**: SG-1000, SC-3000, Master System/Mark III, Game Gear
+A fork of PicoDrive for PSP, skinned to look like Sonic's Ultimate Genesis Collection
 
-PicoDrive was originally created with ARM-based handheld devices
-in mind, but later received various cross-platform improvements
-such as SH2 recompilers for MIPS (mips32r2), ARM64 (armv8), RISC-V (RV64IM)
-and PowerPC (G4/2.03).
+### Why?
 
-PicoDrive was the first software to properly emulate Virtua Racing and
-its SVP chip.
+In 2019 (when i originally had this idea) i had just gotten a PSP, and in 2016-2020 i had a copy of Sonic's UGC on the Xbox 360, i knew that the PSP was very much powerful enough to run the same library of games, and this was on the back of my head until August of 2024, when i finally gained enough skill to make this into a reality.
 
-At present, most development activity occurs in
-[irixxxx's fork](https://github.com/irixxxx/picodrive);
-[notaz's repo](https://github.com/notaz/picodrive) is updated less frequently.
+**Fun Fact** - I did make a **terrible** version of this idea in 2019 with my limited brain, which i still have archived today, (i stretched the SUGC logo to fit on the PBP, changed the background which made the game list almost unreadable, and a few other horrible hacks), but, it didn't involve any source code. This time i'm doing it for real, redesigning the UI and open sourcing all of it
 
-### Sega Pico and Storyware Pages
+### Downloads
 
-PicoDrive can use Storyware pages and pad overlays in png format in the same
-directory as the cartridge image. The selected page is displayed automatically
-if the pen is used on the storyware or pad. Details about how to correctly name
-the pages can be found in the *How to run Sega Pico games* section in
-`platform/base_readme.txt`.
+Soon!
 
-### Gallery
+### Q&A 
 
-Some images of demos and homebrew software:
+**Q: Will you make this for the European version of Sonic's UGC (Sega Mega Drive Ultimate Collection // SEGA MDUC)?**
+A: Most likely not, the version i grew up with was SUGC and it doesn't hit the same for me, i did take a brief look on and it is largely the same, i'm just not bothered to do it at the moment.
 
-| ![Titan Overdrive 2](https://github.com/irixxxx/picodrive/assets/31696370/02a4295b-ac9d-4114-bcd1-b5dd6e5930d0) | ![Raycast Demo](https://github.com/irixxxx/picodrive/assets/31696370/6e9c0bfe-49a9-45aa-bad7-544de065e388) | ![OpenLara](https://github.com/irixxxx/picodrive/assets/31696370/8a00002a-5c10-4d1d-a948-739bf978282a) |
-| --- | --- | --- |
-| [_MegaDrive: Titan Overdrive 2_](https://demozoo.org/productions/170767/) | [_MegaCD: RaycastDemo_](https://github.com/matteusbeus/RaycastDemo) | [_32X: OpenLara_](https://github.com/XProger/OpenLara/releases) |
-|![Titan Overdrive 2](https://github.com/irixxxx/picodrive/assets/31696370/2e263e81-51c8-4daa-ab16-0b2cd5554f84)|![DMA David](https://github.com/irixxxx/picodrive/assets/31696370/fbbeac15-8665-4d3e-9729-d1f8c35e417a)|![Doom Resurrection](https://github.com/irixxxx/picodrive/assets/31696370/db7b7153-b917-4850-8442-a748c2fbb968)|
-| [_MegaDrive: Titan Overdrive 2_](https://www.pouet.net/prod.php?which=69648) | [_MegaDrive: DMA David_](http://www.mode5.net/DMA_David.html) | [_32X: Doom Resurrection_](https://archive.org/details/doom-32x-all-versions) |
+**Q: Will you make a PS2 Port? It looks really similar to the PSP version!**
+A: Never. I haven't owned a PS2 since 2013 (when i was a fucking baby) and don't plan to. 
 
-| ![Cheril Perils Classics](https://github.com/irixxxx/picodrive/assets/31696370/653914a4-9f90-45f8-bd91-56e784df7550) | ![Stygian Quest](https://github.com/irixxxx/picodrive/assets/31696370/8196801b-85c8-4d84-97e1-ae57ab3d577f) | ![Sword of Stone](https://github.com/irixxxx/picodrive/assets/31696370/3c4a8f40-dad6-4fa4-b188-46b428a4b8c6) |
-| --- | --- | --- |
-| [_SG-1000: Cheril Perils Classic_](https://www.smspower.org/Homebrew/CherilPerilsClassic-SG) | [_MasterSystem: Stygian Quest_](https://www.smspower.org/Homebrew/StygianQuest-SMS) | [_GameGear: The Sword of Stone_](https://www.smspower.org/Homebrew/SwordOfStone-GG) |
-| ![Nyan Cat](https://github.com/irixxxx/picodrive/assets/31696370/6fe0d38b-549d-4faa-9351-b260a89dc745) | ![Anguna the Prison Dungeon](https://github.com/irixxxx/picodrive/assets/31696370/3264b962-7da2-4257-9ff7-1b509bd50cdf) | ![Turrican](https://github.com/irixxxx/picodrive/assets/31696370/c4eb2f2c-806e-4f4b-ac94-5c2cda82e962) |
-| [_SG-1000: Nyan Cat_](https://www.smspower.org/Homebrew/NyanCat-SG) | [_MS: Anguna the Prison Dungeon_](https://www.smspower.org/Homebrew/AngunaThePrisonDungeon-SMS) | [_GameGear: Turrican_](https://www.smspower.org/Homebrew/GGTurrican-GG) |
+**Q: How can i add more games?**
+A: Download or compile the Memory Stick version, go to or create the "rom" directory and add your games there, the file format doesn't matter
 
-### Compiling
+**Q: How do i compile on Windows?**
+A: Not supported. I haven't used Windows as my daily OS since 2021 and have no plans to go back. Modern Windows is terrible and i have no reason to switch back (the biggest hurdle was Camtasia, which i finally stopped using after 6 years). Just use a Linux VM if you can't make the switch
 
-For platforms where release builds are provided, the simplest method is to
-use the release script `tools/release.sh`. See the script itself for details.
-To create platform builds run the command:
+**Q: Does this work on PS Vita?**
+A: Yes, just use Adrenaline and you're good, both the ISO and Memory Stick versions should work with no problem. 
 
-```
-tools/release.sh [version] [platforms...]
-```
+**Q: Does this work on PPSSPP?**
+A: Absolutely! I used PPSSPP for testing the dev builds and it works flawlessly, but if you're gonna emulate SEGA Genesis games on an emulator, just use a normal Sega Genesis emulator, this is largely intended for people who own a PSP or PS Vita console.
 
-This will generate a file for each platform in the `release-[version]` directory.
-A list of supported platforms can be found in the release script.
+**Q: How did you get an uncompressed version of the SUGC Intro and Soundtrack**
+A: I ripped them myself from the Xbox 360 version, just extract the files from the ISO and you should be good. ([Intro Video](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SGC2_ATTRACT.wmv) - [Background Theme](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/retro_dreams.xma) - [Background Video](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/MAIN0001.wmv) - [SUGC Logo](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SUGC_LOGO.PNG))
 
-These commands should create an executable for a unixoid platform not included in the list:
-
-```
-configure --platform=generic
-make
-```
-
-To compile PicoDrive as a libretro core, use this command:
-
-```
-make -f Makefile.libretro
-```
-
-### Helix MP3 decoder for ARM
-
-For 32 bit ARM platforms, the optimized helix MP3 decoder can be used to play
-MP3 audio files with CD games. Due to licensing issues, the helix source files
-cannot be provided here; if you have obtained the sources legally, place them in
-the `platform/common/helix` directory.
-
-To compile the helix sources:
-
-- Set the environment variable `CROSS_COMPILE` to your cross compiler prefix
-(e.g. `arm-linux-gnueabi-`)
-- Set the environment variable `LIBGCC` to your cross compiler's `libgcc.a`
-(e.g. `/usr/lib/gcc-cross/arm-linux-gnueabi/4.7/libgcc.a`)
-- Run the command:
-```
-make -C platform/common/helix CROSS_COMPILE=$CROSS_COMPILE LIBGCC=$LIBGCC
-```
-- Copy the resulting shared library named `${CROSS_COMPILE}helix_mp3.so` as
-`libhelix.so` to the directory containing the PicoDrive binary on the target device.
-
-In addition, helix support must be enabled in PicoDrive itself by compiling with:
-
-```
-make PLATFORM_MP3=1
-```
-
-This switch is enabled automatically for Gamepark Holdings devices (`gp2x`,
-`caanoo` and `wiz`). Without installing `libhelix.so`, these devices will not play
-MP3 audio.
-
-### Installing
-
-The release script produces packages or zip archives which have to be installed
-manually on the target device. Usually this involves unpacking the archive or 
-copying the package to a directory on either the internal device storage or an
-SD card. Device-specific instructions can be found on the internet.
-
-
-Send bug reports, fixes etc. to <derkub@gmail.com>
+**Q: How did you figure out this really confusing source code?**
+A: I admit that the PicoDrive source code is *almost* unreadable, and i definitely wouldn't recommend it to a beginner, but even if you are total trash at C code like i am, if you know where to look, it's not that hard, 99% of the changes were in the UI and the PSP-specific code, not on the emulator itself, i'm pretty sure it's possible to port this to Windows/Linux/PS2, but i have no desire in doing it myself, i can provide all of the design files, [my DMs are always open](https://raythefox.pw), message me and i'll be glad to help.
