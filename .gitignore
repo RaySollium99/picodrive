@@ -39,3 +39,4 @@ PicoDrive*.elf
 pico_int_offs.h
 amalgamate
 textfilter
+.vscode/
