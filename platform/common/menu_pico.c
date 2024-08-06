@@ -14,6 +14,7 @@
 #include "menu_pico.h"
 #include "input_pico.h"
 #include "version.h"
+// #include <pspmp3.h>
 
 #include "../libpicofe/plat.h"
 
@@ -155,12 +156,39 @@ static void menu_draw_prep(void)
 	{
 		make_bg(0, 0);
 	}
+
 	else
 	{
 		int pos;
 		char buff[256];
 		pos = plat_get_skin_dir(buff, 256);
 		strcpy(buff + pos, "background.png");
+
+		// should really only happen once, on startup..
+		memset(g_menubg_ptr, 0, g_menuscreen_w * g_menuscreen_h * 2);
+		if (readpng(g_menubg_ptr, buff, READPNG_BG,
+						g_menuscreen_w, g_menuscreen_h) < 0)
+			memset(g_menubg_ptr, 0, g_menuscreen_w * g_menuscreen_h * 2);
+	}
+}
+
+static void menu_draw_prep_selector(void)
+{
+	if (menu_w == g_menuscreen_w && menu_h == g_menuscreen_h)
+		return;
+	menu_w = g_menuscreen_w, menu_h = g_menuscreen_h;
+
+	if (PicoGameLoaded)
+	{
+		make_bg(0, 0);
+	}
+
+	else
+	{
+		int pos;
+		char buff[256];
+		pos = plat_get_skin_dir(buff, 256);
+		strcpy(buff + pos, "background_selector.png");
 
 		// should really only happen once, on startup..
 		memset(g_menubg_ptr, 0, g_menuscreen_w * g_menuscreen_h * 2);
@@ -1248,9 +1276,10 @@ static int main_menu_handler(int id, int keys)
 		}
 		break;
 	case MA_MAIN_LOAD_ROM:
+		menu_w = menu_h = 0;
 		rom_fname_reload = NULL;
 		ret_name = menu_loop_romsel_d(rom_fname_loaded,
-			sizeof(rom_fname_loaded), rom_exts, NULL, menu_draw_prep);
+			sizeof(rom_fname_loaded), rom_exts, NULL, menu_draw_prep_selector);
 		if (ret_name != NULL) {
 			lprintf("selected file: %s\n", ret_name);
 			rom_fname_reload = ret_name;
@@ -1352,7 +1381,7 @@ static const char h_saveload[] = "Game options are overloading global options";
 
 static menu_entry e_menu_main[] =
 {
-	mee_label     ("Sonic's UGC for PSP " VERSION),
+	mee_label     (""),
 	mee_label     (""),
 	mee_label     (""),
 	mee_label     (""),
@@ -1378,6 +1407,8 @@ void menu_loop(void)
 {
 	static int sel = 0;
 
+
+
 	me_enable(e_menu_main, MA_MAIN_RESUME_GAME, PicoGameLoaded);
 	me_enable(e_menu_main, MA_MAIN_SAVE_STATE,  PicoGameLoaded);
 	me_enable(e_menu_main, MA_MAIN_LOAD_STATE,  PicoGameLoaded);
@@ -1390,7 +1421,7 @@ void menu_loop(void)
 
 	menu_enter(PicoGameLoaded);
 	in_set_config_int(0, IN_CFG_BLOCKING, 1);
-	me_loop_d(e_menu_main, &sel, menu_draw_prep, menu_main_draw_status);
+	me_loop_d(e_menu_main, &sel, menu_draw_prep_selector, menu_main_draw_status);
 
 	if (PicoGameLoaded) {
 		if (engineState == PGS_Menu)
