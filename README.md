@@ -10,15 +10,29 @@ In 2019 (when i originally had this idea) i had just gotten a PSP, and in 2016-2
 
 ### Downloads
 
-Soon!
+### To-do List
 
-### Q&A 
+| Done    | Feature               | Progress |
+| ------- | --------------------- | -------- |
+| ✅ (M2)  | Title Screen          | 100%     |
+| ✅ (M2)  | Backgrounds           | 100%     |
+| ✅ (M2)  | SRAM in SAVEDATA      | 100%     |
+| ✅ (M1)  | ISO Support           | 100%     |
+| ✅ (M1)  | Game List             | 100%     |
+| ✳️ (M3) | Imagine Float Fontmap | 0%       |
+| ✳️ (M3) | Background Theme      | 35%      |
+| ❌ (M4)  | ROM Selector UI       | 0%       |
+| ❌ (M5)  | ROM Boxart UI         | 0%       |
+| ❌ (M6)  | Rating System         | 0%       |
+| ❓ (V1)  | Customizer Tool       | 0%       |
+
+### Q&A
 
 **Q: Will you make this for the European version of Sonic's UGC (Sega Mega Drive Ultimate Collection // SEGA MDUC)?**
 A: Most likely not, the version i grew up with was SUGC and it doesn't hit the same for me, i did take a brief look on and it is largely the same, i'm just not bothered to do it at the moment.
 
 **Q: Will you make a PS2 Port? It looks really similar to the PSP version!**
-A: Never. I haven't owned a PS2 since 2013 (when i was a fucking baby) and don't plan to. 
+A: Never. I haven't owned a PS2 since 2013 (when i was a fucking baby) and don't plan to.
 
 **Q: How can i add more games?**
 A: Download or compile the Memory Stick version, go to or create the "rom" directory and add your games there, the file format doesn't matter
@@ -27,7 +41,7 @@ A: Download or compile the Memory Stick version, go to or create the "rom" direc
 A: Not supported. I haven't used Windows as my daily OS since 2021 and have no plans to go back. Modern Windows is terrible and i have no reason to switch back (the biggest hurdle was Camtasia, which i finally stopped using after 6 years). Just use a Linux VM if you can't make the switch
 
 **Q: Does this work on PS Vita?**
-A: Yes, just use Adrenaline and you're good, both the ISO and Memory Stick versions should work with no problem. 
+A: Yes, just use Adrenaline and you're good, both the ISO and Memory Stick versions should work with no problem.
 
 **Q: Does this work on PPSSPP?**
 A: Absolutely! I used PPSSPP for testing the dev builds and it works flawlessly, but if you're gonna emulate SEGA Genesis games on an emulator, just use a normal Sega Genesis emulator, this is largely intended for people who own a PSP or PS Vita console.
