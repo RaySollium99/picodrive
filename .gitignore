@@ -19,7 +19,7 @@ cpu/musashi/m68kmake
 cpu/musashi/m68kops.c
 cpu/musashi/m68kops.h
 config.cfg
-skin
+
 srm/
 brm/
 mds/

@@ -408,6 +408,7 @@ PSPSDK ?= $(shell psp-config --pspsdk-path)
 TARGET = PicoDrive
 PSP_EBOOT_TITLE = Sonic UGC
 PSP_EBOOT_ICON = platform/psp/data/icon.png
+PSP_EBOOT_PIC1 = platform/psp/skin/background_selector.png
 LIBS += -lpng -lm -lz -lpspgu -lpsppower -lpspaudio -lpsprtc -lpspaudiocodec
 EXTRA_TARGETS = EBOOT.PBP
 include $(PSPSDK)/lib/build.mak
