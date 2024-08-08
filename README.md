@@ -10,6 +10,8 @@ In 2019 (when i originally had this idea) i had just gotten a PSP, and in 2016-2
 
 ### Downloads
 
+Soon!
+
 ### To-do List
 
 | Done    | Feature               | Progress |
