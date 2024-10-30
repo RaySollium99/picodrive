@@ -20,5 +20,5 @@ static menu_entry e_menu_keyconfig[];
 void psp_menu_init(void)
 {
 	me_enable(e_menu_sms_options, MA_SMSOPT_GHOSTING, 0);
-	me_enable(e_menu_keyconfig, MA_CTRL_DEADZONE, 0);
+	me_enable(e_menu_keyconfig, MA_CTRL_DEADZONE, 0);	
 }
