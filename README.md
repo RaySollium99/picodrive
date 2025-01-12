@@ -21,7 +21,7 @@ Soon!
 | ✅ (M2)  | SRAM in SAVEDATA      | 100%     |
 | ✅ (M1)  | ISO Support           | 100%     |
 | ✅ (M1)  | Game List             | 100%     |
-| ✳️ (M3) | Imagine Float Fontmap | 0%       |
+| ✳️ (M3) | Bunken Tech Fontmap | 100%       |
 | ✳️ (M3) | Background Theme      | 35%      |
 | ❌ (M4)  | ROM Selector UI       | 0%       |
 | ❌ (M5)  | ROM Boxart UI         | 0%       |
@@ -31,7 +31,7 @@ Soon!
 ### Q&A
 
 **Q: Will you make this for the European version of Sonic's UGC (Sega Mega Drive Ultimate Collection // SEGA MDUC)?**
-A: Most likely not, the version i grew up with was SUGC and it doesn't hit the same for me, i did take a brief look on and it is largely the same, i'm just not bothered to do it at the moment.
+A: Originally i wasn't going to, but after making a separate branch to do it, i'm definitely going to release it. Up-to-date Development builds will ALWAYS be based on SUGC though.
 
 **Q: Will you make a PS2 Port? It looks really similar to the PSP version!**
 A: Never. I haven't owned a PS2 since 2013 (when i was a fucking baby) and don't plan to.
@@ -49,7 +49,7 @@ A: Yes, just use Adrenaline and you're good, both the ISO and Memory Stick versi
 A: Absolutely! I used PPSSPP for testing the dev builds and it works flawlessly, but if you're gonna emulate SEGA Genesis games on an emulator, just use a normal Sega Genesis emulator, this is largely intended for people who own a PSP or PS Vita console.
 
 **Q: How did you get an uncompressed version of the SUGC Intro and Soundtrack**
-A: I ripped them myself from the Xbox 360 version, just extract the files from the ISO and you should be good. ([Intro Video](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SGC2_ATTRACT.wmv) - [Background Theme](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/retro_dreams.xma) - [Background Video](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/MAIN0001.wmv) - [SUGC Logo](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SUGC_LOGO.PNG))
+A: I ripped them myself from the Xbox 360 and PS3 version, just extract the files from the ISO and you should be good. ([Intro Video (X360))](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SGC2_ATTRACT.wmv) - [Background Theme (Retro Dreams) (X360)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/retro_dreams.xma) - [Background Video (X360)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/MAIN0001.wmv) - [SUGC Logo (PS3)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SUGC_LOGO.PNG) - [SMDUC Logo (PS3)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SMDUC_LOGO.PNG) - [SUGC Logo (Ps3)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SMDUC_LOGO.PNG) - [XMB BGM (PS3)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SND0.AT3) - [XMB BGM (PS3, converted to WAV)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SND0.wav) - [XMB BGM (PS3, converted to MP3)](https://dl.raythefox.pw/Projects/Sonic%27s%20UGC%20for%20PSP/Assets/SND0.mp3))
 
 **Q: How did you figure out this really confusing source code?**
 A: I admit that the PicoDrive source code is *almost* unreadable, and i definitely wouldn't recommend it to a beginner, but even if you are total trash at C code like i am, if you know where to look, it's not that hard, 99% of the changes were in the UI and the PSP-specific code, not on the emulator itself, i'm pretty sure it's possible to port this to Windows/Linux/PS2, but i have no desire in doing it myself, i can provide all of the design files, [my DMs are always open](https://raythefox.pw), message me and i'll be glad to help.
