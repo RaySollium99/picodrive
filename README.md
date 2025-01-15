@@ -16,11 +16,11 @@ Soon!
 
 | Done    | Feature               | Progress |
 | ------- | --------------------- | -------- |
+| ✅ (M1)  | ISO Support           | 100%     |
+| ✅ (M1)  | Game List             | 100%     |
 | ✅ (M2)  | Title Screen          | 100%     |
 | ✅ (M2)  | Backgrounds           | 100%     |
 | ✅ (M2)  | SRAM in SAVEDATA      | 100%     |
-| ✅ (M1)  | ISO Support           | 100%     |
-| ✅ (M1)  | Game List             | 100%     |
 | ✳️ (M3) | Bunken Tech Fontmap | 100%       |
 | ✳️ (M3) | Background Theme      | 35%      |
 | ❌ (M4)  | ROM Selector UI       | 0%       |
